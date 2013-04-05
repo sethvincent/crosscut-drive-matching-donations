@@ -36,6 +36,7 @@ a:hover, a:focus {
 
 p {
   margin: 12px 0px;
+  font-size: 17px;
 }
 
 #app {
@@ -52,10 +53,6 @@ p {
   margin-top: 13px;
   margin-right: 25px;
 }
-
-/*.graph rect {
-  fill: #FF4405;
-}*/
 
 .goalp {
   text-transform: uppercase;
@@ -79,7 +76,7 @@ h2.description {
 }
 
 p.status {
-  font-size: 17px;
+  margin-bottom: 25px;
 }
 
 .percentage {

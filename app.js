@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AuwSoq4skLXjdGNkeTdNWmxKZkNxRVBRYUFQX2F6dHc&output=html';
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AuwSoq4skLXjdGVMWVlrN1Y0elFkYkh1R2xlcDNmd1E&output=html';
 
   Tabletop.init({ 
     key: public_spreadsheet_url,
@@ -23,7 +23,7 @@ $(document).ready(function(){
     $(".percentage").text(percentage + '%');
     $(".goal").text(data.goal);
     $(".current").text(data.current);
-
+    $(".donations").text(data.current * 200);
     // todo: create an object up front that calls parseInt on numbers 
     // and creates attributes on the object
     if ( parseInt(data.current) < parseInt(data.goal) ){
@@ -34,8 +34,8 @@ $(document).ready(function(){
     
     $(".action").attr("href", data.link).attr("alt", data.headline);
     
-    var chartSize = data.goal * 0.8;
-    var current = data.current * 0.8;
+    var chartSize = data.goal * 5;
+    var current = data.current * 5;
 
     var chart = d3.select(".graph").append("svg")
       .attr("width", 80)
